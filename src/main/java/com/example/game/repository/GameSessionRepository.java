@@ -1,11 +1,14 @@
 package com.example.game.repository;
 
 import com.example.game.entity.GameSession;
+import com.example.game.entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 
 public interface GameSessionRepository extends JpaRepository<GameSession, Long> {
+
+
 
     @Query(nativeQuery = true,
             value = "SELECT gs.id, gs.name, gs.start_time, " +
